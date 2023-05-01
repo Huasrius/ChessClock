@@ -5,7 +5,6 @@ constructor(timerName, time){
 
     this.timerName = timerName;
     this.timerStarted = false;
-    this.timerPaused = true; // braucht es wahrscheinlich nicht.
     this.timeInterval = null;
     this.endTimeMS = 100;
     this.settedTime = time; 
@@ -17,7 +16,6 @@ constructor(timerName, time){
 startTimer() { 
 
     if (!this.timerStarted) {
-        this.timerPaused = false;
         var startTimeMS = new Date().getTime();
         this.endTimeMS = startTimeMS + this.timeLeftMS;
         // Set the interval for the setTime function
@@ -29,12 +27,9 @@ startTimer() {
 
 pauseTimer(){
 
-    if(!this.timerPaused){
-        clearInterval(this.timeInterval)
-        console.log(this.timerName)
-        this.timerStarted = false;
-        this.timerPaused = true;
-    }
+    clearInterval(this.timeInterval)
+    console.log(this.timerName)
+    this.timerStarted = false;
 
 }
 
