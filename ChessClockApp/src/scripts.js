@@ -1,7 +1,7 @@
 
-const timer1 = new timer("timerText1", 10)
+const timer1 = new timer(timerName = "timerText1", time = 10)
 
-const timer2 = new timer("timerText2", 10)
+const timer2 = new timer(timerName = "timerText2", time = 10)
 
 function player1(){
 
