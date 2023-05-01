@@ -41,8 +41,8 @@ resetTimer(){
 
     clearInterval(this.timeInterval);
     this.timerStarted = false;
-    this.timeLeftMS = 1000 * settedTime;
-    displayTime()
+    this.timeLeftMS = 1000 * this.settedTime;
+    this.displayTime()
 
 }
 
