@@ -1,7 +1,7 @@
 
-const timer1 = new timer("timerText1")
+const timer1 = new timer("timerText1", 10)
 
-const timer2 = new timer("timerText2")
+const timer2 = new timer("timerText2", 10)
 
 function player1(){
 
@@ -28,7 +28,6 @@ function resetTimers(){
 
     timer1.resetTimer();
     timer2.resetTimer();
-    console.log("ResetTimers")
     
 }
 

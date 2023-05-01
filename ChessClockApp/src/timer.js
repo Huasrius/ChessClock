@@ -1,14 +1,14 @@
 
 class timer {
 
-constructor(timerName){
+constructor(timerName, time){
 
     this.timerName = timerName;
     this.timerStarted = false;
     this.timerPaused = true; // braucht es wahrscheinlich nicht.
     this.timeInterval = null;
     this.endTimeMS = 100;
-    this.settedTime = 5 * 60; 
+    this.settedTime = time; 
     this.timeLeftMS = 1000 * this.settedTime; // 5 min
 
 }
@@ -43,7 +43,6 @@ resetTimer(){
     this.timerStarted = false;
     this.timeLeftMS = 1000 * this.settedTime;
     this.displayTime()
-
 }
 
 setTime() {
@@ -53,7 +52,7 @@ setTime() {
     if (this.timeLeftMS > 0) {
         this.displayTime()
     } else {
-        //timer1.innerHTML = '00 : 00';
+        document.getElementById(this.timerName).innerHTML = '00 : 00';
     }
 
 }
