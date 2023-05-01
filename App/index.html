@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessClock</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="src/timer.js"></script>
+    <script src="src/scripts.js"></script>
+
+</head>
+
+<body class="background-dark"> <!-- HTMl -->
+
+
+    <div class="center margin-top timer" id="timerText1">
+        <string onclick="pauseTimer1()">05 : 00</string>
+    </div>
+    <div class="center margin-top timer">
+        <img onclick="options()" src="img/start.png">
+    </div>
+    <div class="center margin-top timer">
+        <img onclick="pauseTimers()" src="img/pause.png">
+    </div>
+    <div class="center margin-top timer">
+        <img onclick="resetTimers()" src="img/reset.png">
+    </div>
+    <div class="center margin-top timer" id="timerText2">
+        <string onclick="pauseTimer2()">05 : 00</string>
+    </div>
+
+</body>
+
+</html>

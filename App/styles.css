@@ -1,0 +1,25 @@
+
+.background-dark {
+    background-color: #262626;
+}
+        
+.center {
+    display: flex;
+    justify-content: center;
+}
+        
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.margin-top {
+    margin-top: 50px;
+}
+        
+.timer {
+    font-size: 60px;
+    color: white;
+    font-family: 'Roboto', sans-serif; /*Robot ist eine Schriftart*/
+}
+ 
