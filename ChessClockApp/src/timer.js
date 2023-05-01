@@ -10,6 +10,7 @@ constructor(timerName, time){
     this.endTimeMS = 100;
     this.settedTime = time; 
     this.timeLeftMS = 1000 * this.settedTime; // 5 min
+    this.alarm = new Audio('sound/alarm.mp3');
 
 }
 
@@ -52,6 +53,7 @@ setTime() {
     if (this.timeLeftMS > 0) {
         this.displayTime()
     } else {
+        this.alarm.play();
         document.getElementById(this.timerName).innerHTML = '00 : 00';
     }
 
