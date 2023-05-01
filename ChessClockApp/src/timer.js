@@ -5,8 +5,9 @@ constructor(timerSetup){
 
     this.timerSetup = timerSetup;
     //this.endTimeMS = 0; // dank JavaScript nicht nötig
-    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
+    this.timeLeftMS = this.timerSetup.mainTimeMS;
     this.timerStarted = false;
+    this.timerPaused = true;
     this.timeInterval = null;
 
 }
@@ -14,7 +15,7 @@ constructor(timerSetup){
 setupTimer(timerSetup) {
 
     this.timerSetup = timerSetup;
-    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
+    this.timeLeftMS = this.timerSetup.mainTimeMS;
     this.timerStarted = false;
 
 }
@@ -22,6 +23,7 @@ setupTimer(timerSetup) {
 startTimer() { 
 
     if (!this.timerStarted) {
+        this.timerPaused = false;
         var startTimeMS = new Date().getTime();
         this.endTimeMS = startTimeMS + this.timeLeftMS;
         // Set the interval for the setTime function
@@ -31,10 +33,17 @@ startTimer() {
 
 }
 
-pauseTimer(){
+pauseTimer(playerButton){
 
+    if(!this.timerPaused){
     clearInterval(this.timeInterval)
     this.timerStarted = false;
+    this.timerPaused = true;
+    if (this.timerSetup.fisher && playerButton){
+        this.timeLeftMS += this.timerSetup.fisherTimeMS;
+        this.displayTime();
+    }
+}
 
 }
 
@@ -42,7 +51,8 @@ resetTimer(){
 
     clearInterval(this.timeInterval);
     this.timerStarted = false;
-    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
+    this.timerPaused = true;
+    this.timeLeftMS = this.timerSetup.mainTimeMS;
     this.displayTime()
 }
 

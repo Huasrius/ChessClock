@@ -4,16 +4,15 @@ class timerSetup {
 constructor(timerName, mainTime, fisher, fisherTime, delay, delayTime){
 
     this.timerName = timerName;
-    this.mainTime = mainTime;
+    this.mainTimeMS = mainTime * 1000;
     this.fisher = fisher;
-    this.fisherTime = fisherTime;
+    this.fisherTimeMS = fisherTime * 1000;
     this.delay = delay;
-    this.delayTime = delayTime;
+    this.delayTimeMS = delayTime * 1000;
     this.alarm = new Audio('sound/alarm.mp3'); // momentan wird für jeder Setup ein audio allociert!!
     }
 
 }
-
 
 class timerSetups {
 
