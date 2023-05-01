@@ -1,7 +1,12 @@
 
-const timer1 = new timer(timerName = "timerText1", time = 10)
+const timerDeafultSetups = new timerSetups(20, false, 0, false, 0, 10, false, 0, false, 0);
 
-const timer2 = new timer(timerName = "timerText2", time = 10)
+const timer1 = new timer(timerDeafultSetups.timer1);
+
+const timer2 = new timer(timerDeafultSetups.timer2);
+
+//timer1.displayTime();
+//timer2.displayTime();
 
 function player1(){
 

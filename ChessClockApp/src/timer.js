@@ -1,15 +1,21 @@
 
 class timer {
 
-constructor(timerName, time){
+constructor(timerSetup){
 
-    this.timerName = timerName;
+    this.timerSetup = timerSetup;
+    //this.endTimeMS = 0; // dank JavaScript nicht nötig
+    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
     this.timerStarted = false;
     this.timeInterval = null;
-    this.endTimeMS = 100;
-    this.settedTime = time; 
-    this.timeLeftMS = 1000 * this.settedTime; // 5 min
-    this.alarm = new Audio('sound/alarm.mp3');
+
+}
+
+setupTimer(timerSetup) {
+
+    this.timerSetup = timerSetup;
+    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
+    this.timerStarted = false;
 
 }
 
@@ -28,7 +34,6 @@ startTimer() {
 pauseTimer(){
 
     clearInterval(this.timeInterval)
-    console.log(this.timerName)
     this.timerStarted = false;
 
 }
@@ -37,7 +42,7 @@ resetTimer(){
 
     clearInterval(this.timeInterval);
     this.timerStarted = false;
-    this.timeLeftMS = 1000 * this.settedTime;
+    this.timeLeftMS = 1000 * this.timerSetup.mainTime;
     this.displayTime()
 }
 
@@ -48,8 +53,8 @@ setTime() {
     if (this.timeLeftMS > 0) {
         this.displayTime()
     } else {
-        this.alarm.play();
-        document.getElementById(this.timerName).innerHTML = '00 : 00';
+        this.timerSetup.alarm.play();
+        document.getElementById(this.timerSetup.timerName).innerHTML = '00 : 00';
     }
 
 }
@@ -63,8 +68,9 @@ displayTime() {
     var minutesString = ('0' + minutes).slice(-2); // Um die null bei singel digits darzustellen
     var secondsString = ('0' + seconds).slice(-2); // Um die null bei singel digits darzustellen
     var text = minutesString  +  ' : '  +  secondsString;
-    document.getElementById(this.timerName).innerHTML = text;
+    document.getElementById(this.timerSetup.timerName).innerHTML = text;
 
 }
 
 }
+
