@@ -27,7 +27,7 @@ startTimer() {
         var startTimeMS = new Date().getTime();
         this.endTimeMS = startTimeMS + this.timeLeftMS;
         // Set the interval for the setTime function
-        this.timeInterval = setInterval(()=>this.setTime(), 1000); 
+        this.timeInterval = setInterval(()=>this.setTime(), 10); 
         this.timerStarted = true;
     }
 
@@ -59,7 +59,7 @@ resetTimer(){
 setTime() {
 
     this.timeLeftMS = this.endTimeMS - new Date().getTime();
-    console.log(this.timeLeftMS/1000);
+    //console.log(this.timeLeftMS/1000);
     if (this.timeLeftMS > 0) {
         this.displayTime()
     } else {
