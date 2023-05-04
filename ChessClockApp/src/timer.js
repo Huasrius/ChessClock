@@ -74,7 +74,7 @@ displayTime() {
     var minutes = this.timeLeftMS / (1000 * 60);
     var seconds = (this.timeLeftMS / 1000) % 60;
     minutes = Math.floor(minutes); // Nachkomastelle abschneiden
-    seconds = Math.round(seconds); // Zahl Runden
+    seconds = Math.floor(seconds); // Zahl Runden
     var minutesString = ('0' + minutes).slice(-2); // Um die null bei singel digits darzustellen
     var secondsString = ('0' + seconds).slice(-2); // Um die null bei singel digits darzustellen
     var text = minutesString  +  ' : '  +  secondsString;
