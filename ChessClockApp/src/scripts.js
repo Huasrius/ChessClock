@@ -9,8 +9,8 @@ timer1.displayTime();
 timer2.displayTime();
 
 // how to setup timers with new values
-//timerDefaultSetups.timer1.mainTimeMS = 15 * 1000;
-timer1.setupTimer(timerDefaultSetups.timer1);
+// timerDefaultSetups.timer1.mainTimeMS = 15 * 1000;
+// timer1.setupTimer(timerDefaultSetups.timer1);
 
 function player1(){
 
