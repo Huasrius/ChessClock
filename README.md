@@ -6,3 +6,4 @@ To Do
 -Zahl unklikabel
 -Timers klasse
 -Datein abspeichern
+-delay Zeit anzeigen falls vorhanden
