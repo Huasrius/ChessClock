@@ -7,3 +7,9 @@ To Do
 -Timers klasse
 -Datein abspeichern
 -delay Zeit anzeigen falls vorhanden
+
+
+Lustige Ideen
+
+-Augen 
+-Möglichkeit sound fürs Klicken den Alarm aufzunehmen (jeweils festgesetzte Zeit)
