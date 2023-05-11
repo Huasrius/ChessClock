@@ -5,8 +5,8 @@ const timer1 = new timer(timerDefaultSetups.timer1);
 
 const timer2 = new timer(timerDefaultSetups.timer2);
 
-timer1.displayTime();
-timer2.displayTime();
+
+
 
 // how to setup timers with new values
 // timerDefaultSetups.timer1.mainTimeMS = 15 * 1000;

@@ -10,38 +10,39 @@
 
 </head>
 
-<body class="background-dark"> <!-- HTMl -->
+<body >
+    <!-- HTMl -->
 
     <div class="wrapper">
         <div onclick="player1()" class="player"  id="player1">
-            <string>00 : 00</string>
+            <string>START</string>
         </div>
 
-    <div class="center margin-top timer" id="timerText1">
-        <string onclick="player1()">05 : 00</string>
-    </div>
-    <div class="center margin-top timer">
-        <img onclick="player1()" src="img/player1.png">
-    </div>
-    <div class="center margin-top timer">
-        <img onclick="pauseTimers()" src="img/pause.png">
-    </div>
-    <div class="center margin-top timer">
-        <img onclick="resetTimers()" src="img/reset.png">
-    </div>
-    <div class="center margin-top timer">
-        <img onclick="player2()" src="img/player2.png">
-    </div>
-    <div class="center margin-top timer" id="timerText2">
-        <string onclick="player2()">05 : 00</string>
+
+        <div class="settings">
+            <div onclick="pauseTimers()" id="pause" class="settingObj">
+                  <img src="img\pause.svg" alt="">
+            </div>
+            <div onclick="resetTimers()" id="reset" class="settingObj">
+                <img src="img\restart.svg" alt="">
+            </div>
+            <div onclick="setting()" id="setting" class="settingObj">
+                <img src="img\settings.svg" alt="">
+            </div>
+        </div>
+
+
+
         <div onclick="player2()" class="player" id="player2">
-            <string>00 : 00</string>
+            <string>START</string>
         </div>
     </div>
+
 
 </body>
 <script src="src/timer.js"></script>
 <script src="src/timerSetup.js"></script>
 <script src="src/scripts.js"></script>
+
 
 </html>

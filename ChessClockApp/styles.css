@@ -1,25 +1,126 @@
+:root {
+    --base-color: #262626;
+    --shadow-inset-press:   inset 0px 0px 143px -2px rgba(255, 255, 255, 0.15);
+    --shadow-inset-wait:   inset 0px 0px 143px -2px rgba(0, 0, 0, 0.15);
 
-.background-dark {
-    background-color: #262626;
+  }
+
+
+
+body {
+    background-color: var(--base-color);
 }
-        
-.center {
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: white;
+    font-family: 'Arial', sans-serif;
+    /*Robot ist eine Schriftart*/
+
+    /* border: 1px solid aliceblue; */
+}
+
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: white;
+    display: grid;
+    grid-template-rows: 45vh 10vh 45vh;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.36);
+}
+
+.player {
+    height: 45vh;
     display: flex;
     justify-content: center;
-}
-        
-.img {
-    width: 100%;
-    height: auto;
+    align-items: center;
+
+    font-size: clamp(60px, 13vw, 120px);
+    letter-spacing: .0em;
+
+    cursor: pointer;
+
+    -webkit-box-shadow: var(--shadow-inset-wait);
+    box-shadow: var(--shadow-inset-wait);
+    background-color: hsla(41, 96%, 55%, 0.861);
 }
 
-.margin-top {
-    margin-top: 50px;
+.player1_rot {
+    transform: rotateX(180deg);
 }
-        
-.timer {
-    font-size: 60px;
-    color: white;
-    font-family: 'Roboto', sans-serif; /*Robot ist eine Schriftart*/
+
+
+/**** ON PLAY TOOGLE ***/ 
+
+.play{
+    background-color: rgba(157, 165, 167, 0.414);
+    box-shadow: var(  --shadow-inset-press);
+
 }
+
+
+.settings {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+
+    background-color: var(--base-color);
+    
+    /* -webkit-box-shadow:var(--shadow-inset);
+    box-shadow: var(--shadow-inset); */
+
+
+    border-top: 2px solid var(--base-color);
+    outline-top:  2px solid white;
+}
+
+
+
+.wrapper string {
+    display: inline-block;
+
+}
+
+
+.settingObj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
  
+}
+
+
+.settingObj img {
+    height: 40px;
+    max-height: 8vw;
+    cursor: pointer;
+}
+
+.settingObj#reset img {
+    transform: rotateY(180deg);
+}
+
+
+
+@media screen and (max-width: 500px){
+    
+}
+
+.settingObj#setting {
+    grid-column: 6/7;
+}
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.993 32">
+  <g id="katman_1" data-name="katman 1">
+    <g>
+      <path d="M4,8c-2.2,0-4,1.8-4,4v8c0,2.2,1.8,4,4,4h2l10,8V0L6,8h-2Z" style="fill: #fff;"/>
+      <path d="M24.486,7.514c4.679,4.68,4.679,12.293,0,16.973l2.828,2.828c6.238-6.239,6.238-16.39,0-22.629l-2.828,2.828Z" style="fill: #fff;"/>
+      <path d="M18.243,11.756c2.34,2.341,2.34,6.148,0,8.488l2.828,2.828c3.898-3.899,3.898-10.244,0-14.145l-2.83,2.828Z" style="fill: #fff;"/>
+    </g>
+  </g>
+</svg>
