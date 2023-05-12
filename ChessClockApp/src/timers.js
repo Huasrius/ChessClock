@@ -1,10 +1,10 @@
 
 class timers {
 
-constructor(timerSetups){
+constructor(playerSetups){
 
-this.player1 = new timer(timerSetups.timer1);
-this.player2 = new timer(timerSetups.timer2);
+this.player1 = new timer(playerSetups.player1Setup);
+this.player2 = new timer(playerSetups.player2Setup);
 
 
 }

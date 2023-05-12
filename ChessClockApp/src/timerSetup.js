@@ -18,8 +18,8 @@ class timerSetups {
 
     constructor(mainTime1, fisher1, fisherTime1, delay1, delayTime1, mainTime2, fisher2, fisherTime2, delay2, delayTime2){
 
-        this.timer1 = new timerSetup("player1", mainTime1, fisher1, fisherTime1, delay1, delayTime1)
-        this.timer2 = new timerSetup("player2", mainTime2, fisher2, fisherTime2, delay2, delayTime2)
+        this.player1Setup = new timerSetup("player1", mainTime1, fisher1, fisherTime1, delay1, delayTime1)
+        this.player2Setup = new timerSetup("player2", mainTime2, fisher2, fisherTime2, delay2, delayTime2)
 
     }
     

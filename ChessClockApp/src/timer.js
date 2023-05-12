@@ -1,9 +1,9 @@
 
 class timer {
 
-constructor(timerSetup){
+constructor(playerSetup){
 
-    this.timerSetup = timerSetup;
+    this.timerSetup = playerSetup;
     //this.endTimeMS = 0; // dank JavaScript nicht nötig
     this.timeLeftMS = this.timerSetup.mainTimeMS;
     this.delayTimeLeftMS = this.timerSetup.delayTimeMS;

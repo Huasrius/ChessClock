@@ -1,7 +1,7 @@
 
-const timerDefaultSetups = new timerSetups(5 * 60, true, 5, false, 0, 5 * 60, true, 5, false, 0);
+const playerSetups = new timerSetups(5 * 60, true, 5, false, 0, 5 * 60, true, 5, false, 0);
 
-const chessClock = new timers(timerDefaultSetups);
+const chessClock = new timers(playerSetups);
 
 
 // how to setup timers with new values
