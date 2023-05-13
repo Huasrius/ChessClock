@@ -1,26 +1,27 @@
 
-class timerSetup {
+class chessClockSetupClass {
 
-constructor(timerName, mainTime, fisher, fisherTime, delay, delayTime){
+    constructor(mainTime1, fisher1, fisherTime1, delay1, delayTime1, mainTime2, fisher2, fisherTime2, delay2, delayTime2) {
 
-    this.timerName = timerName;
-    this.mainTimeMS = mainTime * 1000;
-    this.fisher = fisher;
-    this.fisherTimeMS = fisherTime * 1000;
-    this.delay = delay;
-    this.delayTimeMS = delayTime * 1000;
-    this.alarm = new Audio('sound/alarm.mp3'); // momentan wird für jeder Setup ein audio allociert!!
+        this.player1Setup = new playerSetupClass("player1", mainTime1, fisher1, fisherTime1, delay1, delayTime1)
+        this.player2Setup = new playerSetupClass("player2", mainTime2, fisher2, fisherTime2, delay2, delayTime2)
+
     }
 
 }
 
-class timerSetups {
+class playerSetupClass {
 
-    constructor(mainTime1, fisher1, fisherTime1, delay1, delayTime1, mainTime2, fisher2, fisherTime2, delay2, delayTime2){
+    constructor(playerName, mainTime, fisher, fisherTime, delay, delayTime) {
 
-        this.player1Setup = new timerSetup("player1", mainTime1, fisher1, fisherTime1, delay1, delayTime1)
-        this.player2Setup = new timerSetup("player2", mainTime2, fisher2, fisherTime2, delay2, delayTime2)
+        this.playerName = playerName;
+        this.mainTimeMS = mainTime * 1000;
+        this.fisher = fisher;
+        this.fisherTimeMS = fisherTime * 1000;
+        this.delay = delay;
+        this.delayTimeMS = delayTime * 1000;
+        this.alarm = new Audio('sound/alarm.mp3'); // momentan wird für jedes Setup ein audio allociert!!
 
     }
-    
+
 }

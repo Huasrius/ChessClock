@@ -14,26 +14,26 @@
     <!-- HTMl -->
 
     <div class="wrapper">
-        <div onclick="player1()" class="player player1_Rot"  id="player1">
+        <div onclick="chessClock.player1Button(false)" class="player player1_Rot"  id="player1">
             <string>START</string>
         </div>
 
 
         <div class="settings">
-            <div onclick="pauseTimers()" id="pause" class="settingObj">
+            <div onclick="chessClock.pauseButton()" id="pause" class="settingObj">
                   <img src="img\pause.svg" alt="">
             </div>
-            <div onclick="resetTimers()" id="reset" class="settingObj">
+            <div onclick="chessClock.resetButton()" id="reset" class="settingObj">
                 <img src="img\restart.svg" alt="">
             </div>
-            <div onclick="setting()" id="setting" class="settingObj">
+            <div onclick="chessClock.settingButton()" id="setting" class="settingObj">
                 <img src="img\settings.svg" alt="">
             </div>
         </div>
 
 
 
-        <div onclick="player2()" class="player" id="player2">
+        <div onclick="chessClock.player2Button()" class="player" id="player2">
             <string>START</string>
         </div>
     </div>
