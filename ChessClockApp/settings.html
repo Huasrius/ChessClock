@@ -12,78 +12,104 @@
 
 <body >
     <!-- HTMl -->
-    <div>
-        <div id="player1">
+    <div class="settingGrid ">
+
+        <div id="player1Time">
+
             <h2>Player 1</h2>
-            <div class="options gapMain">
-                <span>Main Time:</span>
-                <div>
+
+            <div class="player1Grid">
+
+                <div class="field1">
+                    <span>Main Time:</span>
+                </div>
+                <div class="field2">
                     <input type="text" class="timeField" id="main1MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="main1SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
-            </div>
-            <div class="options gapFisher">
-                <div>
+                        
+                <div class="field3">
                     <span>Fisher:</span>
+                </div>
+                <div class="field4">
                     <input type="checkbox" id="fisher1" name="auswahl" onclick="toggleField(this, 'fisher1Time')">
                 </div>
-                <div id="fisher1Time">
+                <div id="fisher1Time" class="field5">
                     <input type="text" class="timeField" id="fisher1MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="fisher1SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
-            </div>    
-            <div class="options gapDelay">
-                <di>
+
+                <div class="field6">
                     <span>Delay:</span>
+                </div>
+                <div class="field7">
                     <input type="checkbox" id="delay1" name="auswahl" onclick="toggleField(this, 'delay1Time')">
-                </di>
-                <div id="delay1Time">
+                </div>
+                <div id="delay1Time" class="field8">
                     <input type="text" class="timeField" id="delay1MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="delay1SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
+
+                <div class="field9">
+                    <span>Player 2:</span>
+                </div>
+                <div class="field10">
+                    <input type="checkbox" id="player2" name="auswahl" onclick="toggleField(this, 'player2Time')">
+                </div>
+                <div class="field11">
+                    <span>(different Settings)</span>
+                </div>
+
             </div>
+
         </div>
-        <div class="options">
-            <span>Player 2:</span>
-            <input type="checkbox" id="player2" name="auswahl" onclick="toggleField(this, 'player2Time')">
-            <span>(different Settings)</span>
-        </div>
+
         <div id="player2Time">
+
             <h2>Player 2</h2>
-            <div class="options gapMain">
-                <span>Main Time:</span>
-                <div>
+
+            <div class="player2Grid">
+
+                <div class="field1">
+                    <span>Main Time:</span>
+                </div>
+                <div class="field2">
                     <input type="text" class="timeField" id="main2MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="main2SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
-            </div>
-            <div class="options gapFisher">
-                <div>
+                        
+                <div class="field3">
                     <span>Fisher:</span>
+                </div>
+                <div class="field4">
                     <input type="checkbox" id="fisher2" name="auswahl" onclick="toggleField(this, 'fisher2Time')">
                 </div>
-                <div id="fisher2Time">
+                <div id="fisher2Time" class="field5">
                     <input type="text" class="timeField" id="fisher2MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="fisher2SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
-            </div>    
-            <div class="options gapDelay">
-                <di>
+
+                <div class="field6">
                     <span>Delay:</span>
+                </div>
+                <div class="field7">
                     <input type="checkbox" id="delay2" name="auswahl" onclick="toggleField(this, 'delay2Time')">
-                </di>
-                <div id="delay2Time">
+                </div>
+                <div id="delay2Time" class="field8">
                     <input type="text" class="timeField" id="delay2MinutesInput" oninput="validateInput(this, 0, 99)">
                     <span>:</span>
                     <input type="text" class="timeField" id="delay2SecondsInput" oninput="validateInput(this, 1, 59)">
                 </div>
+
             </div>
+
         </div>
+
     </div> 
 
 </body>

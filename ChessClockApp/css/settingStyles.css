@@ -1,8 +1,5 @@
 :root {
     --base-color: #262626;
-    --shadow-inset-press:   inset 0px 0px 143px -2px rgba(255, 255, 255, 0.15);
-    --shadow-inset-wait:   inset 0px 0px 143px -2px rgba(0, 0, 0, 0.15);
-
   }
 
 
@@ -22,21 +19,9 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-
-.wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-
-    color: white;
-    display: grid;
-    grid-template-rows: 50vh 50vh;
-    -webkit-box-shadow: 0px 5px 23px -1px rgba(0, 0, 0, 0.36);
-    box-shadow: 0px 5px 23px -1px rgba(0, 0, 0, 0.36);
-}
-
 h2 {
 
-    margin: 30px 0px 20px 20px;
+    margin: 30px 0px 20px 0px;
 }
 
 .options {
@@ -47,26 +32,38 @@ h2 {
 
 }
 
-.gapMain {
-
-    gap: 10px;
-
-}
-
-.gapFisher {
-
-    gap: 21px;
-
-}
-
-.gapDelay {
-
-    gap: 24px;
-
-}
-
 .timeField {
     color: black;
     width: 19px;
 }
 
+.settingGrid {
+    margin: 0px 0px 0px 30px;
+    display: grid;
+    grid-template-rows: 350px 350px;
+}
+
+
+.player1Grid {
+    display: grid;
+    grid-template-columns: 100px 80px 120px;
+    grid-template-rows: repeat(4, 50px);
+}
+
+.player2Grid {
+    display: grid;
+    grid-template-columns: 100px 80px 120px;
+    grid-template-rows: repeat(3, 50px);
+}
+    
+.field1 { grid-area: 1 / 1 / 2 / 3; }
+.field2 { grid-area: 1 / 3 / 2 / 4; }
+.field3 { grid-area: 2 / 1 / 3 / 2; }
+.field4 { grid-area: 2 / 2 / 3 / 3; }
+.field5 { grid-area: 2 / 3 / 3 / 4; }
+.field6 { grid-area: 3 / 1 / 4 / 2; }
+.field7 { grid-area: 3 / 2 / 4 / 3; }
+.field8 { grid-area: 3 / 3 / 4 / 4; }
+.field9 { grid-area: 4 / 1 / 5 / 2; }
+.field10 { grid-area: 4 / 2 / 5 / 3; }
+.field11 { grid-area: 4 / 3 / 5 / 4; }

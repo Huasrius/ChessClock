@@ -1,8 +1,5 @@
 :root {
     --base-color: #262626;
-    --shadow-inset-press:   inset 0px 0px 143px -2px rgba(255, 255, 255, 0.15);
-    --shadow-inset-wait:   inset 0px 0px 143px -2px rgba(0, 0, 0, 0.15);
-
   }
 
 
