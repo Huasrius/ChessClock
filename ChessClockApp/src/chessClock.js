@@ -11,6 +11,17 @@ class chessClockClass {
 
     }
 
+
+    setUpChessClock(newChessClockSetup) {
+
+        this.player1.setUpTimer(newChessClockSetup.player1Setup);
+        this.player2.setUpTimer(newChessClockSetup.player2Setup);
+        this.activePlayer = 1;
+        this.isReseted = true;
+        this.isPaused = true;
+
+    }
+
     player1Button() {
 
         if (!this.isPaused && this.player1.timeLeft || this.isReseted && this.player1.timeLeft) {

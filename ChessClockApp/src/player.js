@@ -18,10 +18,11 @@ class playerClass {
 
     }
 
-    setupTimer(playerSetup) {
+    setUpTimer(newPlayerSetup) {
 
-        this.playerSetup = playerSetup;
+        this.playerSetup = newPlayerSetup;
         this.timeLeftMS = this.playerSetup.mainTimeMS;
+        this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
 
     }
 

@@ -1,6 +1,6 @@
 {
-    "name": "Eieruhr",
-    "short_name": "Eieruhr",
+    "name": "ChessClock",
+    "short_name": "Chessclock",
     "theme_color": "#262626",
     "background_color": "#262626",
     "display": "fullscreen",

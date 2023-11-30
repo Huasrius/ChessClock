@@ -30,7 +30,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
 
-    color: white;
+    color: white;   
     display: grid;
     grid-template-rows: 45vh 10vh 45vh;
     -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.36);
@@ -119,8 +119,12 @@ body {
     grid-column: 6/7;
 }
 
+.time {
+    display: flex;
+    align-items: center;
+}
 
-
-
-
-
+.timeField {
+    color: black;
+    width: 40px;
+}
