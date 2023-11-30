@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessClock</title>
+    <link rel="stylesheet" href="css/settingStyles.css">
+
+</head>
+
+<body >
+    <!-- HTMl -->
+    <div>
+        <div id="player1">
+            <h2>Player 1</h2>
+            <div class="options gapMain">
+                <span>Main Time:</span>
+                <div>
+                    <input type="text" class="timeField" id="main1MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="main1SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>
+            <div class="options gapFisher">
+                <div>
+                    <span>Fisher:</span>
+                    <input type="checkbox" id="fisher1" name="auswahl" onclick="toggleField(this, 'fisher1Time')">
+                </div>
+                <div id="fisher1Time">
+                    <input type="text" class="timeField" id="fisher1MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="fisher1SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>    
+            <div class="options gapDelay">
+                <di>
+                    <span>Delay:</span>
+                    <input type="checkbox" id="delay1" name="auswahl" onclick="toggleField(this, 'delay1Time')">
+                </di>
+                <div id="delay1Time">
+                    <input type="text" class="timeField" id="delay1MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="delay1SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <span>Player 2:</span>
+            <input type="checkbox" id="player2" name="auswahl" onclick="toggleField(this, 'player2Time')">
+            <span>(different Settings)</span>
+        </div>
+        <div id="player2Time">
+            <h2>Player 2</h2>
+            <div class="options gapMain">
+                <span>Main Time:</span>
+                <div>
+                    <input type="text" class="timeField" id="main2MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="main2SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>
+            <div class="options gapFisher">
+                <div>
+                    <span>Fisher:</span>
+                    <input type="checkbox" id="fisher2" name="auswahl" onclick="toggleField(this, 'fisher2Time')">
+                </div>
+                <div id="fisher2Time">
+                    <input type="text" class="timeField" id="fisher2MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="fisher2SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>    
+            <div class="options gapDelay">
+                <di>
+                    <span>Delay:</span>
+                    <input type="checkbox" id="delay2" name="auswahl" onclick="toggleField(this, 'delay2Time')">
+                </di>
+                <div id="delay2Time">
+                    <input type="text" class="timeField" id="delay2MinutesInput" oninput="validateInput(this, 0, 99)">
+                    <span>:</span>
+                    <input type="text" class="timeField" id="delay2SecondsInput" oninput="validateInput(this, 1, 59)">
+                </div>
+            </div>
+        </div>
+    </div> 
+
+</body>
+
+
+<script src="src/settingScript.js"></script>
+
+
+</html>

@@ -1,0 +1,72 @@
+:root {
+    --base-color: #262626;
+    --shadow-inset-press:   inset 0px 0px 143px -2px rgba(255, 255, 255, 0.15);
+    --shadow-inset-wait:   inset 0px 0px 143px -2px rgba(0, 0, 0, 0.15);
+
+  }
+
+
+
+body {
+    background-color: var(--base-color);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: white;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    -webkit-box-shadow: 0px 5px 23px -1px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 5px 23px -1px rgba(0, 0, 0, 0.36);
+}
+
+h2 {
+
+    margin: 30px 0px 20px 20px;
+}
+
+.options {
+
+    margin: 0px 0px 15px 20px;
+    display: flex;
+    height: 17px;
+
+}
+
+.gapMain {
+
+    gap: 10px;
+
+}
+
+.gapFisher {
+
+    gap: 21px;
+
+}
+
+.gapDelay {
+
+    gap: 24px;
+
+}
+
+.timeField {
+    color: black;
+    width: 19px;
+}
+

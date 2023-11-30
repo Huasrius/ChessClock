@@ -11,6 +11,12 @@ class chessClockClass {
 
     }
 
+    settingButton() {
+
+        this.resetButton();
+        window.location.href = "settings.html"
+
+    }
 
     setUpChessClock(newChessClockSetup) {
 
@@ -79,12 +85,6 @@ class chessClockClass {
         this.isPaused = true;
         this.isReseted = true;
         this.activePlayer = 1;
-
-    }
-
-    settingButton() {
-
-        this.resetButton();
 
     }
 
