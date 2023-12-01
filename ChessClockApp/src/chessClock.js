@@ -8,6 +8,8 @@ class chessClockClass {
         this.activePlayer = 1;
         this.isReseted = true;
         this.isPaused = true;
+        this.player1.displayTime();
+        this.player2.displayTime();
 
     }
 
