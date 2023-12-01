@@ -18,6 +18,12 @@ class chessClockClass {
 
     }
 
+    saveButton() {
+
+        window.location.href = "index.html"
+
+    }
+
     setUpChessClock(newChessClockSetup) {
 
         this.player1.setUpTimer(newChessClockSetup.player1Setup);

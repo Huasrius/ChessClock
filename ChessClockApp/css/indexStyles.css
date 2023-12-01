@@ -26,7 +26,6 @@ body {
 .wrapper {
     max-width: 900px;
     margin: 0 auto;
-
     color: white;   
     display: grid;
     grid-template-rows: 45vh 10vh 45vh;
@@ -50,8 +49,10 @@ body {
     background-color: hsla(41, 96%, 55%, 0.861);
 }
 
-.player1_rot {
-    transform: rotateX(180deg);
+.player1 {
+
+    transform: rotate(180deg);
+
 }
 
 
@@ -67,7 +68,7 @@ body {
 .settings {
     height: 10vh;
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
 
     background-color: var(--base-color);
     
@@ -76,7 +77,7 @@ body {
 
 
     border-top: 2px solid var(--base-color);
-    outline-top:  2px solid white;
+
 }
 
 
@@ -112,9 +113,7 @@ body {
     
 }
 
-.settingObj#setting {
-    grid-column: 6/7;
-}
+
 
 .time {
     display: flex;

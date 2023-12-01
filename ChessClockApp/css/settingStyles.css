@@ -14,46 +14,43 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     color: white;
     font-family: 'Arial', sans-serif;
 }
 
-h2 {
-
-    margin: 30px 0px 20px 0px;
+h2 {    
+    margin: 0px 0px 10px 0px;
 }
 
-.options {
 
-    margin: 0px 0px 15px 20px;
-    display: flex;
-    height: 17px;
-
-}
-
-.timeField {
-    color: black;
-    width: 19px;
+.setting{
+    max-width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: hsla(41, 91%, 56%, 0.861);
+    font-size: 24px;
 }
 
 .settingGrid {
-    margin: 0px 0px 0px 30px;
+
     display: grid;
-    grid-template-rows: 350px 350px;
+    grid-template-rows: 50px 260px 220px;
+    margin: 0px 0px 0px 50px;
 }
 
 
 .player1Grid {
     display: grid;
-    grid-template-columns: 100px 80px 120px;
-    grid-template-rows: repeat(4, 50px);
+    grid-template-columns: 95px 36px 110px;
+    grid-template-rows: repeat(4, 45px);
+    align-items: center;
 }
 
 .player2Grid {
     display: grid;
-    grid-template-columns: 100px 80px 120px;
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: 95px 36px 110px;
+    grid-template-rows: repeat(3, 45px);
+    align-items: center;
 }
     
 .field1 { grid-area: 1 / 1 / 2 / 3; }
@@ -66,4 +63,32 @@ h2 {
 .field8 { grid-area: 3 / 3 / 4 / 4; }
 .field9 { grid-area: 4 / 1 / 5 / 2; }
 .field10 { grid-area: 4 / 2 / 5 / 3; }
-.field11 { grid-area: 4 / 3 / 5 / 4; }
+.field11 { grid-area: 4 / 3 / 5 / 4; font-size: 14px; }
+
+
+
+.timeField {
+    color: black;
+    width: 31px;
+    font-size: 24px; 
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px
+}
+
+.saveButton{
+    cursor: pointer;
+
+    -webkit-box-shadow: var(--shadow-inset-wait);
+    box-shadow: var(--shadow-inset-wait);
+    background-color: hsla(313, 49%, 44%, 0.861);
+    border: none;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px -6px;
+    border-radius: 12px;
+}
