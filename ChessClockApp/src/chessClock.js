@@ -9,6 +9,7 @@ class chessClockClass {
         this.activePlayer = 0;
         this.isReseted = true;
         this.isPaused = true;
+        this.pauseStartImage = document.getElementById("pauseStartImage");
 
     }
 
@@ -33,6 +34,7 @@ class chessClockClass {
                 this.player1.moveCount += 1;
             }
             this.player1.displayCounter();
+            this.pauseStartImage.src = "img/pause.svg";
             this.activePlayer = 2;
             this.isReseted = false;
             this.isPaused = false;
@@ -49,6 +51,7 @@ class chessClockClass {
                 this.player2.moveCount += 1;
             }
             this.player2.displayCounter();
+            this.pauseStartImage.src = "img/pause.svg";
             this.activePlayer = 1;
             this.isReseted = false;
             this.isPaused = false;
@@ -57,7 +60,11 @@ class chessClockClass {
     }
 
 
-    pauseButton() {
+    pauseStartButton() {
+
+        if (this.activePlayer == 0){
+            this.activePlayer = 1;
+        }
 
         if (this.player1.timeLeft && this.player2.timeLeft) {
             if (this.isPaused) {
@@ -67,10 +74,13 @@ class chessClockClass {
                     this.player2.startTimer();
                 }
                 this.isPaused = false;
+                this.isReseted = false;
+                this.pauseStartImage.src = "img/pause.svg";
             } else {
                 this.player1.pauseTimer(false);
                 this.player2.pauseTimer(false);
                 this.isPaused = true;
+                this.pauseStartImage.src = "img/start.png";
             }
         }
 
@@ -85,6 +95,7 @@ class chessClockClass {
         this.activePlayer = 0;
         this.player1.resetTimer();
         this.player2.resetTimer();
+        this.pauseStartImage.src = "img/start.png";
 
     }
 
