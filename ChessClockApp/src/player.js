@@ -15,6 +15,10 @@ class playerClass {
         this.delayTimeInterval = null;
         this.intervalPeriodeMS = 10;
         this.moveCount = 0;
+        this.playerField = document.getElementById(this.playerSetup.playerName + "Field");
+        this.pauseColor = "hsla(41, 91%, 56%, 0.861)";
+        this.runColor = "hsla(120, 66%, 36%, 0.861)";
+        this.loseColor = "hsla(0, 76%, 30%, 0.861)";
 
     }
 
@@ -44,6 +48,7 @@ class playerClass {
             }
             this.timerPaused = false;
             this.timerStarted = true;
+            this.playerField.style.backgroundColor = this.runColor;
             
         }
 
@@ -58,7 +63,8 @@ class playerClass {
         } else {
             this.timeLeft = false;
             this.playerSetup.alarm.play();
-            document.getElementById(this.playerSetup.playerName).innerHTML = '00 : 00';
+            //document.getElementById(this.playerSetup.playerName).innerHTML = '00 : 00';
+            this.playerField.style.backgroundColor = this.loseColor;
             // this only works cause the function setDelayTime is in the same Object like the delayTimeInterval
             clearInterval(this.timeInterval);
         }
@@ -91,6 +97,7 @@ class playerClass {
             this.timerStarted = false;
             this.timerPaused = true;
             this.pausedByPlayerButton = playerButton;
+            this.playerField.style.backgroundColor = this.pauseColor;
             if (playerButton) {
                 if (this.playerSetup.fisher) {
                     this.timeLeftMS += this.playerSetup.fisherTimeMS;
@@ -98,7 +105,6 @@ class playerClass {
                 }
             }
         }
-        // console.log("test",this.pausedByPlayerButton)
     }
 
     resetTimer() {
@@ -111,7 +117,8 @@ class playerClass {
         this.pausedByPlayerButton = true;
         this.timeLeftMS = this.playerSetup.mainTimeMS;
         this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
-        this.display()
+        this.display();
+        this.playerField.style.backgroundColor = this.pauseColor;
     }
 
     display() {
