@@ -42,13 +42,26 @@ function checkInitialStates(...divIds) {
 
 }
 
-function writeDefaultValues() {
-
+function writeAllZeros(parentElement) {
+  // Durchlaufe alle Kinder des übergebenen Elements
+  for (var i = 0; i < parentElement.children.length; i++) {
+    var childElement = parentElement.children[i];
+    // Wenn das Kind ein Input-Feld ist
+    if (childElement.tagName === 'INPUT') {
+      if (childElement.type === 'text') {
+        childElement.value = 0;
+      }
+    }
+    // Wenn das Kind ein Container ist, rufe die Funktion rekursiv auf
+    if (childElement.children.length > 0) {
+      writeAllZeros(childElement);
+    }
+  }
 }
 
 function useSettingsButton() {
   // Daten sammeln und speichern
-  var settingsData = collectSettingsData(document.getElementById('setting'));
+  var settingsData = collectSettingsData(document.getElementById('settingGrid'));
   localStorage.setItem('chessTimerSettings', JSON.stringify(settingsData));
   window.location.href = 'index.html';
 }
@@ -79,14 +92,29 @@ function collectSettingsData(parentElement) {
   return data;
 }
 
-// Use the function to check the initial states
-checkInitialStates("fisher1", "delay1", "player2", "fisher2", "delay2");
 
-// Write default Values
-
-writeDefaultValues();
 
 
 window.onload = function () {
 
-}
+  var storedData = localStorage.getItem('chessTimerSettings');
+  var settingGrid = document.getElementById('settingGrid');
+  if (storedData) {
+    var chessTimerSettings = JSON.parse(storedData);
+
+
+  } else {
+    //write InitialValues
+    writeAllZeros(settingGrid);
+    var main1MinutesInput = document.getElementById('main1MinutesInput');
+    main1MinutesInput.value = 10;
+    
+  }
+
+  // Use the function to check the initial states
+  checkInitialStates("fisher1", "delay1", "player2", "fisher2", "delay2");
+  // display all together  
+
+  settingGrid.style.display = "grid";
+
+};
