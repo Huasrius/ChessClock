@@ -28,12 +28,11 @@ class chessClockClass {
     player1Button() {
 
         if (this.player1.timeLeft && (this.activePlayer != 2) && (!this.isPaused || this.isReseted)) {
-            this.player1.pauseTimer(true);
-            this.player2.startTimer();
             if (!this.isReseted) {
                 this.player1.moveCount += 1;
             }
-            this.player1.displayCounter();
+            this.player1.pauseTimer(true);
+            this.player2.startTimer();
             this.pauseStartImage.src = "img/pause.svg";
             this.activePlayer = 2;
             this.isReseted = false;
@@ -45,12 +44,11 @@ class chessClockClass {
     player2Button() {
 
         if (this.player2.timeLeft && (this.activePlayer != 1) && (!this.isPaused || this.isReseted)) {
-            this.player2.pauseTimer(true);
-            this.player1.startTimer();
             if (!this.isReseted) {
                 this.player2.moveCount += 1;
             }
-            this.player2.displayCounter();
+            this.player2.pauseTimer(true);
+            this.player1.startTimer();
             this.pauseStartImage.src = "img/pause.svg";
             this.activePlayer = 1;
             this.isReseted = false;

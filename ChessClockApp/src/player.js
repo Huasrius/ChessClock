@@ -35,9 +35,6 @@ class playerClass {
         if (!this.timerStarted) {
             var startTimeMS = new Date().getTime();
             if (this.playerSetup.delay) {
-                if (this.pausedByPlayerButton) {
-                    this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
-                }
                 this.endTimeMS = startTimeMS + this.delayTimeLeftMS;
                 // Set the interval for the setDelayTime function
                 this.delayTimeInterval = setInterval(() => this.setDelayTime(), this.intervalPeriodeMS);
@@ -92,18 +89,20 @@ class playerClass {
     pauseTimer(playerButton) {
 
         if (!this.timerPaused) {
-            clearInterval(this.delayTimeInterval)
             clearInterval(this.timeInterval)
+            clearInterval(this.delayTimeInterval)
             this.timerStarted = false;
             this.timerPaused = true;
-            this.pausedByPlayerButton = playerButton;
             this.playerField.style.backgroundColor = this.pauseColor;
             if (playerButton) {
                 if (this.playerSetup.fisher) {
                     this.timeLeftMS += this.playerSetup.fisherTimeMS;
-                    this.displayTime();
+                }
+                if (this.playerSetup.delay) {
+                    this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
                 }
             }
+            this.display();
         }
     }
 
@@ -114,7 +113,6 @@ class playerClass {
         this.timerStarted = false;
         this.timerPaused = true;
         this.timeLeft = true;
-        this.pausedByPlayerButton = true;
         this.timeLeftMS = this.playerSetup.mainTimeMS;
         this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
         this.display();
