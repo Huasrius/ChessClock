@@ -60,13 +60,13 @@ body {
 }
 
 .count {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     align-self: end;
 }
 
 .delay{
-    font-size: 24px;
+    font-size: 34px;
     text-align: center;
 }
 
@@ -122,8 +122,6 @@ body {
 @media screen and (max-width: 500px){
     
 }
-
-
 
 .time {
     display: flex;
