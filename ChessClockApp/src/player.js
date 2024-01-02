@@ -54,7 +54,7 @@ class playerClass {
         this.timeLeftMS = this.endTimeMS - new Date().getTime();
         // console.log(this.timeLeftMS / 1000);
         if (this.timeLeftMS > 0) {
-            this.displayTime()
+            this.displayTime();
         } else {
             this.timeLeft = false;
             this.playerSetup.alarm.play();
@@ -69,7 +69,9 @@ class playerClass {
 
         this.delayTimeLeftMS = this.endTimeMS - new Date().getTime();
         // console.log(this.delayTimeLeftMS / 1000);
-        if (this.delayTimeLeftMS <= 0) {
+        if (this.delayTimeLeftMS > 0) {
+            this.displayDelayTime();
+        } else{
             // clear the delayTimeInterval 
             // this only works cause the function setDelayTime is in the same Object like the delayTimeInterval
             clearInterval(this.delayTimeInterval);
@@ -108,21 +110,49 @@ class playerClass {
         this.timeLeft = true;
         this.pausedByPlayerButton = true;
         this.timeLeftMS = this.playerSetup.mainTimeMS;
-        this.displayTime()
+        this.delayTimeLeftMS = this.playerSetup.delayTimeMS;
+        this.display()
+    }
+
+    display() {
+
+        this.displayTime();
+        this.displayCounter();
+        if (this.playerSetup.delay){
+            this.displayDelayTime();
+        }
+
     }
 
     displayTime() {
 
-        // console.log("display time")
-        // console.log(this.timeLeftMS / 1000)
         var minutes = this.timeLeftMS / (1000 * 60);
         var seconds = (this.timeLeftMS / 1000) % 60;
         minutes = Math.floor(minutes); // Nachkomastelle abschneiden
-        seconds = Math.floor(seconds); // Zahl Runden
+        seconds = Math.floor(seconds); 
         var minutesString = ('0' + minutes).slice(-2); // Um die null bei singel digits darzustellen
         var secondsString = ('0' + seconds).slice(-2); // Um die null bei singel digits darzustellen
         var text = minutesString + ' : ' + secondsString;
         document.getElementById(this.playerSetup.playerName).innerHTML = text;
+    }
+
+    displayDelayTime() {
+
+        var minutes = this.delayTimeLeftMS / (1000 * 60);
+        var seconds = (this.delayTimeLeftMS / 1000) % 60;
+        minutes = Math.floor(minutes); // Nachkomastelle abschneiden
+        seconds = Math.floor(seconds); 
+        var minutesString = ('0' + minutes).slice(-2); // Um die null bei singel digits darzustellen
+        var secondsString = ('0' + seconds).slice(-2); // Um die null bei singel digits darzustellen
+        var text = minutesString + ' : ' + secondsString;
+        document.getElementById(this.playerSetup.playerName + "Delay").innerHTML = text;
+
+    }
+
+    displayCounter() {
+
+        var text = "count: " + this.moveCount;
+        document.getElementById(this.playerSetup.playerName + "Count").innerHTML = text;
 
     }
 

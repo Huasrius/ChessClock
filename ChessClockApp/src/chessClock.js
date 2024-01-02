@@ -30,7 +30,7 @@ class chessClockClass {
             this.player1.pauseTimer(true);
             this.player2.startTimer();
             this.player1.moveCount += 1;
-            console.log("count 1", this.player1.moveCount);
+            this.player1.displayCounter();
             this.activePlayer = 2;
             this.isReseted = false;
             this.isPaused = false;
@@ -44,7 +44,7 @@ class chessClockClass {
             this.player2.pauseTimer(true);
             this.player1.startTimer();
             this.player2.moveCount += 1;
-            console.log("count 2", this.player2.moveCount);
+            this.player2.displayCounter();
             this.activePlayer = 1;
             this.isReseted = false;
             this.isPaused = false;
