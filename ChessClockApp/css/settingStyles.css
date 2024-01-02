@@ -32,8 +32,6 @@ h2 {
 }
 
 .settingGrid {
-
-    display: grid;
     grid-template-rows: 50px 260px 220px;
     margin: 0px 0px 0px 50px;
     display: none;

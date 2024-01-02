@@ -16,8 +16,13 @@ window.onload = function () {
         console.log('no saved files found'); //the initial Values are used
     }
 
+    //to display all things on the player Button together
     chessClock.player1.displayTime();
     chessClock.player2.displayTime();
+    var player1Button = document.getElementById('player1Button');
+    var player2Button = document.getElementById('player2Button');
+    player1Button.style.display = "grid";
+    player2Button.style.display = "grid";
 
 };
 

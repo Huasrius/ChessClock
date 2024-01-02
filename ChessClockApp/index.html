@@ -10,24 +10,26 @@
 
 </head>
 
-<body >
+<body>
     <!-- HTMl -->
 
     <div class="wrapper">
-        <div onclick="chessClock.player2Button()" class="player player2">
-            <div id="player2Count" class="count">
-                <string>count</string>
-            </div>
-            <div id="player2" class="time">
-                <string></string>
-            </div>
-            <div id="player2Delay" class="delay">
-                <string>test</string>                
+        <div class="playerField">
+            <div id="player2Button" onclick="chessClock.player2Button()" class="player player2">
+                <div id="player2Count" class="count">
+                    <string>count</string>
+                </div>
+                <div id="player2" class="time">
+                    <string></string>
+                </div>
+                <div id="player2Delay" class="delay">
+                    <string>test</string>
+                </div>
             </div>
         </div>
         <div class="settings">
             <div onclick="chessClock.pauseButton()" id="pause" class="settingObj">
-                  <img src="img\pause.svg" alt="">
+                <img src="img\pause.svg" alt="">
             </div>
             <div onclick="chessClock.resetButton()" id="reset" class="settingObj">
                 <img src="img\restart.svg" alt="">
@@ -36,15 +38,17 @@
                 <img src="img\settings.svg" alt="">
             </div>
         </div>
-        <div onclick="chessClock.player1Button()" class="player">
-            <div id="player1Count" class="count">
-                <string>count</string>
-            </div>
-            <div id="player1" class="time">
-                <string></string>
-            </div>
-            <div id="player1Delay" class="delay">
-                <string>test</string>                
+        <div class="playerField">
+            <div id="player1Button" onclick="chessClock.player1Button()" class="player">
+                <div id="player1Count" class="count">
+                    <string>count</string>
+                </div>
+                <div id="player1" class="time">
+                    <string></string>
+                </div>
+                <div id="player1Delay" class="delay">
+                    <string>test</string>
+                </div>
             </div>
         </div>
     </div>

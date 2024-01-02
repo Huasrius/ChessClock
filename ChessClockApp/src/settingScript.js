@@ -139,7 +139,6 @@ window.onload = function () {
   // Use the function to check the initial states
   checkInitialStates("fisher1", "delay1", "player2", "fisher2", "delay2");
   // display all together  
-
   settingGrid.style.display = "grid";
 
 };
