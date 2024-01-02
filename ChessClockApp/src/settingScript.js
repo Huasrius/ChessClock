@@ -76,7 +76,7 @@ function collectSettingsData(parentElement) {
     // Wenn das Kind ein Input-Feld ist
     if (childElement.tagName === 'INPUT') {
       if (childElement.type === 'text') {
-        data[childElement.id] = childElement.value;
+        data[childElement.id] = parseInt(childElement.value);
       } else if (childElement.type === 'checkbox') {
         data[childElement.id] = childElement.checked;
       }
