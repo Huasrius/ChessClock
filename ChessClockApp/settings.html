@@ -13,10 +13,10 @@
 <body >
     <!-- HTMl -->
     <div class="setting">
-        <div class="settingGrid ">
-
+        <div id="setting" class="settingGrid ">
+  
             <div>
-
+                <!-- This ist just for the format of the Grid -->
             </div>
 
             <div id="player1Time">
@@ -31,7 +31,7 @@
                     <div class="field2">
                         <input type="text" class="timeField" id="main1MinutesInput" oninput="validateInput(this, 0, 99)">
                         <span>:</span>
-                        <input type="text" class="timeField" id="main1SecondsInput" oninput="validateInput(this, 1, 59)">
+                        <input type="text" class="timeField" id="main1SecondsInput" oninput="validateInput(this, 0, 59)">
                     </div>
                             
                     <div class="field3">
@@ -43,7 +43,7 @@
                     <div id="fisher1Time" class="field5">
                         <input type="text" class="timeField" id="fisher1MinutesInput" oninput="validateInput(this, 0, 99)">
                         <span>:</span>
-                        <input type="text" class="timeField" id="fisher1SecondsInput" oninput="validateInput(this, 1, 59)">
+                        <input type="text" class="timeField" id="fisher1SecondsInput" oninput="validateInput(this, 0, 59)">
                     </div>
 
                     <div class="field6">
@@ -55,7 +55,7 @@
                     <div id="delay1Time" class="field8">
                         <input type="text" class="timeField" id="delay1MinutesInput" oninput="validateInput(this, 0, 99)">
                         <span>:</span>
-                        <input type="text" class="timeField" id="delay1SecondsInput" oninput="validateInput(this, 1, 59)">
+                        <input type="text" class="timeField" id="delay1SecondsInput" oninput="validateInput(this, 0, 59)">
                     </div>
 
                     <div class="field9">
@@ -115,22 +115,16 @@
 
             </div>
             <div>
-            <div onclick="chessClock.saveButton()" class="saveButton">
-                <span>Save Settings</span>
+                <div onclick="useSettingsButton()" class="saveButton">
+                    <span>Use Settings</span>
+                </div>
             </div>
-        </div>
         </div>
 
     </div>
 
 </body>
 
-
 <script src="src/settingScript.js"></script>
-<script src="src/player.js"></script>
-<script src="src/chessClock.js"></script>
-<script src="src/chessClockSetup.js"></script>
-<script src="src/indexScript.js"></script>
-
 
 </html>

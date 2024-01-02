@@ -42,8 +42,38 @@ function checkInitialStates(...divIds) {
 
 }
 
+function useSettingsButton() {
+    // Daten sammeln und speichern
+    var settingsData = collectSettingsData(document.getElementById('setting'));
+    localStorage.setItem('chessTimerSettings', JSON.stringify(settingsData));
+    window.location.href = 'index.html';
+}
+
+function collectSettingsData(parentElement) {
+    var data = {};
+
+    // Durchlaufe alle Kinder des übergebenen Elements
+    for (var i = 0; i < parentElement.children.length; i++) {
+      var childElement = parentElement.children[i];
+
+      // Wenn das Kind ein Input-Feld ist
+      if (childElement.tagName === 'INPUT') {
+        if (childElement.type === 'text') {
+          data[childElement.id] = childElement.value;
+        } else if (childElement.type === 'checkbox') {
+          data[childElement.id] = childElement.checked;
+        }
+      }
+
+      // Wenn das Kind ein Container ist, rufe die Funktion rekursiv auf
+      if (childElement.children.length > 0) {
+        var childData = collectSettingsData(childElement);
+        Object.assign(data, childData);
+      }
+    }
+
+    return data;
+  }
+
 // Use the function to check the initial states
 checkInitialStates("fisher1", "delay1", "player2", "fisher2", "delay2");
-
-
-

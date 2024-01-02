@@ -18,7 +18,7 @@ class playerClass {
 
     }
 
-    setUpTimer(newPlayerSetup) {
+    setUpPlayer(newPlayerSetup) {
 
         this.playerSetup = newPlayerSetup;
         this.timeLeftMS = this.playerSetup.mainTimeMS;

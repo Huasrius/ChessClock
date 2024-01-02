@@ -3,37 +3,25 @@ class chessClockClass {
 
     constructor(chessClockSetup) {
 
-        this.player1 = new playerClass(chessClockSetup.player1Setup);
-        this.player2 = new playerClass(chessClockSetup.player2Setup);
+        this.chessClockSetup = chessClockSetup;
+        this.player1 = new playerClass(this.chessClockSetup.player1Setup);
+        this.player2 = new playerClass(this.chessClockSetup.player2Setup);
         this.activePlayer = 1;
         this.isReseted = true;
         this.isPaused = true;
-        this.player1.displayTime();
-        this.player2.displayTime();
 
     }
 
     settingButton() {
 
-        this.resetButton();
         window.location.href = "settings.html"
 
     }
 
-    saveButton() {
-
-        window.location.href = "index.html"
-
-    }
-
     setUpChessClock(newChessClockSetup) {
-
-        this.player1.setUpTimer(newChessClockSetup.player1Setup);
-        this.player2.setUpTimer(newChessClockSetup.player2Setup);
-        this.activePlayer = 1;
-        this.isReseted = true;
-        this.isPaused = true;
-
+        this.chessClockSetup = newChessClockSetup;
+        this.player1.setUpPlayer(this.chessClockSetup.player1Setup);
+        this.player2.setUpPlayer(this.chessClockSetup.player2Setup);
     }
 
     player1Button() {

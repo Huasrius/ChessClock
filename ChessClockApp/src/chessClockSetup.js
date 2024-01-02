@@ -8,6 +8,31 @@ class chessClockSetupClass {
 
     }
 
+    useNewSetup(chessTimerSettings) {
+
+        this.player1Setup.mainTimeMS = (chessTimerSettings.main1MinutesInput * 60 + chessTimerSettings.main1MinutesInput) * 1000;
+        this.player1Setup.fisher = chessTimerSettings.fisher1;
+        this.player1Setup.fisherTimeMS = (chessTimerSettings.fisher1MinutesInput * 60 + chessTimerSettings.fisher1SecondsInput) * 1000;
+        this.player1Setup.delay = chessTimerSettings.delay1;
+        this.player1Setup.delayTimeMS = (chessTimerSettings.delay1MinutesInput * 60 + chessTimerSettings.delay1SecondsInput) * 1000;
+
+        if (chessTimerSettings.player2) {
+            this.player2Setup.mainTimeMS = (chessTimerSettings.main2MinutesInput * 60 + chessTimerSettings.main2MinutesInput) * 1000;
+            this.player2Setup.fisher = chessTimerSettings.fisher2;
+            this.player2Setup.fisherTimeMS = (chessTimerSettings.fisher2MinutesInput * 60 + chessTimerSettings.fisher2SecondsInput) * 1000;
+            this.player2Setup.delay = chessTimerSettings.delay2;
+            this.player2Setup.delayTimeMS = (chessTimerSettings.delay2MinutesInput * 60 + chessTimerSettings.delay2SecondsInput) * 1000;
+        } else {
+
+            this.player2Setup.mainTimeMS = this.player1Setup.mainTimeMS;
+            this.player2Setup.fisher = this.player1Setup.fisher;
+            this.player2Setup.fisherTimeMS = this.player1Setup.fisherTimeMS;
+            this.player2Setup.delay = this.player1Setup.delay;
+            this.player2Setup.delayTimeMS = this.player1Setup.delayTimeMS;
+        }
+
+    }
+
 }
 
 class playerSetupClass {
