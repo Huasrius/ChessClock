@@ -1,4 +1,8 @@
 
+function clearOnClick(inputField) {
+  inputField.value = '';
+}
+
 function validateInput(inputField, minValue, maxValue) {
   var inputValue = inputField.value.trim(); // Remove leading/trailing spaces
   var validValue = parseInt(inputValue, 10);
