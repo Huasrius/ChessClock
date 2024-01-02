@@ -59,6 +59,28 @@ function writeAllZeros(parentElement) {
   }
 }
 
+function writeUsedSettings(parentElement, chessTimerSettings){
+
+    // Durchlaufe alle Kinder des übergebenen Elements
+    for (var i = 0; i < parentElement.children.length; i++) {
+      var childElement = parentElement.children[i];
+      // Wenn das Kind ein Input-Feld ist
+      if (childElement.tagName === 'INPUT') {
+        if (childElement.type === 'text') {
+          childElement.value = String(chessTimerSettings[childElement.id]);
+        } else if (childElement.type === 'checkbox') {
+          childElement.checked = chessTimerSettings[childElement.id];
+        }
+      }
+  
+      // Wenn das Kind ein Container ist, rufe die Funktion rekursiv auf
+      if (childElement.children.length > 0) {
+        writeUsedSettings(childElement, chessTimerSettings);
+
+      }
+    }
+}
+
 function useSettingsButton() {
   // Daten sammeln und speichern
   var settingsData = collectSettingsData(document.getElementById('settingGrid'));
@@ -101,8 +123,7 @@ window.onload = function () {
   var settingGrid = document.getElementById('settingGrid');
   if (storedData) {
     var chessTimerSettings = JSON.parse(storedData);
-
-
+    writeUsedSettings(settingGrid, chessTimerSettings);
   } else {
     //write InitialValues
     writeAllZeros(settingGrid);
