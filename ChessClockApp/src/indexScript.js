@@ -1,6 +1,6 @@
 
 //Initial Values of the App
-const chessClockSetup = new chessClockSetupClass(5, true, 5, false, 0, 5, true, 5, false, 0);
+const chessClockSetup = new chessClockSetupClass(600, true, 5, false, 0, 600, true, 5, false, 0);
 const chessClock = new chessClockClass(chessClockSetup);
 
 window.onload = function () {
