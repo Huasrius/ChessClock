@@ -53,8 +53,11 @@
             </div>
         </div>
     </div>
-
-
+    <script>
+        if (typeof navigator.serviceWorker !== "undefined") {
+          navigator.serviceWorker.register("src/sw.js")
+        }
+      </script>
 </body>
 <script src="src/player.js"></script>
 <script src="src/chessClock.js"></script>
