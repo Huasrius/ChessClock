@@ -1,4 +1,8 @@
 
+if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+
 //Initial Values of the App
 const chessClockSetup = new chessClockSetupClass(600, false, 0, false, 0, 600, false, 0, false, 0);
 const chessClock = new chessClockClass(chessClockSetup);
