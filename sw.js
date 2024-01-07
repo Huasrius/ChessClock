@@ -13,7 +13,12 @@ var URLS = [
   `${GHPATH}/src/player.js`,
   `${GHPATH}/src/chessClockSetup.js`,
   `${GHPATH}/src/settingScript.js`,
-  `${GHPATH}/sound/alarm.mp3`
+  `${GHPATH}/sound/alarm.mp3`,
+  `${GHPATH}/img/pause.svg`,
+  `${GHPATH}/img/restart.svg`,
+  `${GHPATH}/img/setting.svg`,
+  `${GHPATH}/img/start.png`
+
 ,]
 
 var CACHE_NAME = APP_PREFIX + VERSION
