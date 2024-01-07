@@ -14,7 +14,7 @@ var URLS = [
   `${GHPATH}/src/chessClockSetup.js`,
   `${GHPATH}/src/settingScript.js`,
   `${GHPATH}/src/sound.Alarm.mp3`,
-  `${GHPATH}/manifest.webmanifest`,
+  `${GHPATH}/manifest.webmanifest`
 ,]
 
 var CACHE_NAME = APP_PREFIX + VERSION
