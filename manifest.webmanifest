@@ -3,7 +3,7 @@
   "short_name": "Chessclock",
   "background_color": "#262626",
   "theme_color": "#262626",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "start_url": "/ChessClock/",
   "scope": "/ChessClock/",
