@@ -17,13 +17,13 @@
   "icons": [
 
     {
-      "src": "/ChessClock/img/chess.png",
+      "src": "/ChessClock/img/icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/ChessClock/img/chess.png",
+      "src": "/ChessClock/img/icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
