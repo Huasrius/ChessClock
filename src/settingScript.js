@@ -102,7 +102,7 @@ function collectSettingsData(parentElement) {
     // Wenn das Kind ein Input-Feld ist
     if (childElement.tagName === 'INPUT') {
       if (childElement.type === 'text') {
-        if(childElement.value === 'null'){
+        if(childElement.value === ''){
           data[childElement.id] = 0;
         } else {
           data[childElement.id] = parseInt(childElement.value);
