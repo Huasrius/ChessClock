@@ -16,7 +16,7 @@ var URLS = [
   `${GHPATH}/sound/alarm.mp3`,
   `${GHPATH}/img/pause.svg`,
   `${GHPATH}/img/restart.svg`,
-  `${GHPATH}/img/setting.svg`,
+  `${GHPATH}/img/settings.svg`,
   `${GHPATH}/img/start.png`
 
 ,]
