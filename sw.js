@@ -3,16 +3,8 @@ var APP_PREFIX = 'CClock_';
 var VERSION = 'version_002';
 var URLS = [    
   `${GHPATH}/`,
-  `${GHPATH}/index.html`,
-  `${GHPATH}/setting.html`,
-  `${GHPATH}/css/indexStyles.css`,
-  `${GHPATH}/css/settingStyles.css`,
-  `${GHPATH}/img/icon.png`,
-  `${GHPATH}/src/indexScript.js`,
-  `${GHPATH}/src/chessClock.js`,
-  `${GHPATH}/src/player.js`,
-  `${GHPATH}/src/chessClockSetup.js`,
-  `${GHPATH}/src/settingScript.js`
+  `${GHPATH}/index.html`
+
 ]
 
 var CACHE_NAME = APP_PREFIX + VERSION
