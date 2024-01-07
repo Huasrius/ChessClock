@@ -17,6 +17,12 @@
   "icons": [
 
     {
+      "src": "/ChessClock/img/chess.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "/ChessClock/img/windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
     },
