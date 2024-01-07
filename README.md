@@ -1,4 +1,9 @@
 # ChessClock
+
+the app can be downloader over the following link:
+
+https://huasrius.github.io/ChessClock/
+
 To Do
 
 -Sound beim klicken/player drücken
@@ -6,7 +11,6 @@ To Do
     guter Sound finden Nicu
 -Zahl unklikabel Nicu
 -Datein abspeichern ?
--Versuchs App fürs Smartphone erstellen ?
 
 Unterschiede zu chess.com
 
