@@ -12,8 +12,9 @@ var URLS = [
   `${GHPATH}/src/chessClock.js`,
   `${GHPATH}/src/player.js`,
   `${GHPATH}/src/chessClockSetup.js`,
-  `${GHPATH}/src/settingScript.js`
-]
+  `${GHPATH}/src/settingScript.js`,
+  `${GHPATH}/src/sound.Alarm.mp3`
+,]
 
 var CACHE_NAME = APP_PREFIX + VERSION
 self.addEventListener('fetch', function (e) {

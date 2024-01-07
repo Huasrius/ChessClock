@@ -15,11 +15,7 @@
     "window-controls-overlay"
   ],
   "icons": [
-    {
-      "src": "/ChessClock/img/icon.png",
-      "type": "image/png",
-      "sizes": "700x700"
-    },
+
     {
       "src": "/ChessClock/img/windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
@@ -423,10 +419,6 @@
     {
       "src": "/ChessClock/img/ios/100.png",
       "sizes": "100x100"
-    },
-    {
-      "src": "/ChessClock/img/ios/114.png",
-      "sizes": "114x114"
     },
     {
       "src": "/ChessClock/img/ios/120.png",
