@@ -8,10 +8,10 @@ var URLS = [
   `${GHPATH}/css/indexStyles.css`,
   `${GHPATH}/css/settingStyles.css`,
   `${GHPATH}/img/icon.png`,
-  `${GHPATH}/src/indexScript.js`
-  `${GHPATH}/src/chessClock.js`
-  `${GHPATH}/src/player.js`
-  `${GHPATH}/src/chessClockSetup.js`
+  `${GHPATH}/src/indexScript.js`,
+  `${GHPATH}/src/chessClock.js`,
+  `${GHPATH}/src/player.js`,
+  `${GHPATH}/src/chessClockSetup.js`,
   `${GHPATH}/src/settingScript.js`
 ]
 
