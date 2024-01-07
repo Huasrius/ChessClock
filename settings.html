@@ -4,127 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- possible content values: default, black or black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>ChessClock</title>
     <link rel="stylesheet" href="css/settingStyles.css">
     <link rel="shortcut icon" href="#" />
 </head>
 
-<body >
+<body>
     <!-- HTMl -->
-    <div class="setting">
-        <div id="settingGrid" class="settingGrid ">
-  
-            <div>
-                <!-- This ist just for the format of the Grid -->
-            </div>
+    <div class="sticky top-0">
+        <div class="h-safe-area-inset-top" :class="{
+                'bg-black': !transparent
+                            || (transparent && scrollTop > 0)
+            }"></div>
+        <div class="setting">
+            <div id="settingGrid" class="settingGrid ">
 
-            <div id="player1Time">
+                <div>
+                    <!-- This ist just for the format of the Grid -->
+                </div>
 
-                <h2>Player 1</h2>
+                <div id="player1Time">
 
-                <div class="player1Grid">
+                    <h2>Player 1</h2>
 
-                    <div class="field1">
-                        <span>Main Time:</span>
-                    </div>
-                    <div class="field2">
-                        <input type="text" class="timeField" id="main1MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="main1SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
-                    </div>
-                            
-                    <div class="field3">
-                        <span>Fischer:</span>
-                    </div>
-                    <div class="field4">
-                        <input type="checkbox" class="checkbox" id="fisher1" name="auswahl" onclick="toggleField(this, 'fisher1Time')">
-                    </div>
-                    <div id="fisher1Time" class="field5">
-                        <input type="text" class="timeField" id="fisher1MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="fisher1SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
-                    </div>
+                    <div class="player1Grid">
 
-                    <div class="field6">
-                        <span>Delay:</span>
-                    </div>
-                    <div class="field7">
-                        <input type="checkbox" class="checkbox" id="delay1" name="auswahl" onclick="toggleField(this, 'delay1Time')">
-                    </div>
-                    <div id="delay1Time" class="field8">
-                        <input type="text" class="timeField" id="delay1MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="delay1SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
-                    </div>
+                        <div class="field1">
+                            <span>Main Time:</span>
+                        </div>
+                        <div class="field2">
+                            <input type="text" class="timeField" id="main1MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="main1SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
 
-                    <div class="field9">
-                        <span>Differ:</span>
-                    </div>
-                    <div class="field10">
-                        <input type="checkbox" class="checkbox" id="player2" name="auswahl" onclick="toggleField(this, 'player2Time')">
-                    </div>
-                    <div class="field11">
-                        <span>Different settings</span>
+                        <div class="field3">
+                            <span>Fischer:</span>
+                        </div>
+                        <div class="field4">
+                            <input type="checkbox" class="checkbox" id="fisher1" name="auswahl"
+                                onclick="toggleField(this, 'fisher1Time')">
+                        </div>
+                        <div id="fisher1Time" class="field5">
+                            <input type="text" class="timeField" id="fisher1MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="fisher1SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
+
+                        <div class="field6">
+                            <span>Delay:</span>
+                        </div>
+                        <div class="field7">
+                            <input type="checkbox" class="checkbox" id="delay1" name="auswahl"
+                                onclick="toggleField(this, 'delay1Time')">
+                        </div>
+                        <div id="delay1Time" class="field8">
+                            <input type="text" class="timeField" id="delay1MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="delay1SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
+
+                        <div class="field9">
+                            <span>Differ:</span>
+                        </div>
+                        <div class="field10">
+                            <input type="checkbox" class="checkbox" id="player2" name="auswahl"
+                                onclick="toggleField(this, 'player2Time')">
+                        </div>
+                        <div class="field11">
+                            <span>Different settings</span>
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div id="player2Time">
 
-            <div id="player2Time">
+                    <h2>Player 2</h2>
 
-                <h2>Player 2</h2>
+                    <div class="player2Grid">
 
-                <div class="player2Grid">
+                        <div class="field1">
+                            <span>Main Time:</span>
+                        </div>
+                        <div class="field2">
+                            <input type="text" class="timeField" id="main2MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="main2SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
 
-                    <div class="field1">
-                        <span>Main Time:</span>
-                    </div>
-                    <div class="field2">
-                        <input type="text" class="timeField" id="main2MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="main2SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
-                    </div>
-                            
-                    <div class="field3">
-                        <span>Fischer:</span>
-                    </div>
-                    <div class="field4">
-                        <input type="checkbox" class="checkbox" id="fisher2" name="auswahl" onclick="toggleField(this, 'fisher2Time')">
-                    </div>
-                    <div id="fisher2Time" class="field5">
-                        <input type="text" class="timeField" id="fisher2MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="fisher2SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
-                    </div>
+                        <div class="field3">
+                            <span>Fischer:</span>
+                        </div>
+                        <div class="field4">
+                            <input type="checkbox" class="checkbox" id="fisher2" name="auswahl"
+                                onclick="toggleField(this, 'fisher2Time')">
+                        </div>
+                        <div id="fisher2Time" class="field5">
+                            <input type="text" class="timeField" id="fisher2MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="fisher2SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
 
-                    <div class="field6">
-                        <span>Delay:</span>
-                    </div>
-                    <div class="field7">
-                        <input type="checkbox" class="checkbox" id="delay2" name="auswahl" onclick="toggleField(this, 'delay2Time')">
-                    </div>
-                    <div id="delay2Time" class="field8">
-                        <input type="text" class="timeField" id="delay2MinutesInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 99)">
-                        <span>:</span>
-                        <input type="text" class="timeField" id="delay2SecondsInput" onclick="clearOnClick(this)" oninput="validateInput(this, 0, 59)">
+                        <div class="field6">
+                            <span>Delay:</span>
+                        </div>
+                        <div class="field7">
+                            <input type="checkbox" class="checkbox" id="delay2" name="auswahl"
+                                onclick="toggleField(this, 'delay2Time')">
+                        </div>
+                        <div id="delay2Time" class="field8">
+                            <input type="text" class="timeField" id="delay2MinutesInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 99)">
+                            <span>:</span>
+                            <input type="text" class="timeField" id="delay2SecondsInput" onclick="clearOnClick(this)"
+                                oninput="validateInput(this, 0, 59)">
+                        </div>
+
                     </div>
 
                 </div>
-
-            </div>
-            <div>
-                <div onclick="useSettingsButton()" class="saveButton">
-                    <span>Use Settings</span>
+                <div>
+                    <div onclick="useSettingsButton()" class="saveButton">
+                        <span>Use Settings</span>
+                    </div>
                 </div>
             </div>
+
         </div>
-
     </div>
 
 </body>
-
+<script>
+    export default {
+      data() {
+        return {
+          scrollTop: 0
+        }
+      },
+      props: {
+        transparent: {
+          type: Boolean,
+          default: false
+        }
+      },
+      methods: {
+        scrollListener(e) {
+          this.scrollTop = e.target.scrollTop;
+        }
+      },
+      mounted() {
+        window.addEventListener('scroll', this.scrollListener);
+      }
+    }
+    </script>
 <script src="src/settingScript.js"></script>
 
 </html>

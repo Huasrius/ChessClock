@@ -23,6 +23,14 @@ h2 {
     margin: 0px 0px 10px 0px;
 }
 
+.element {
+    height: env(safe-area-inset-top);
+    width: env(safe-area-inset-left);
+    margin: env(safe-area-inset-right);
+    padding: env(safe-area-inset-bottom, 20px);
+}
+.h-safe-area-inset-top { height: env(safe-area-inset-top); }
+.bg-black { background-color: #444; }
 
 .setting{
     max-width: 900px;
