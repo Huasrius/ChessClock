@@ -122,8 +122,6 @@ function collectSettingsData(parentElement) {
   return data;
 }
 
-document.documentElement.requestFullscreen();
-
 
 window.onload = function () {
 

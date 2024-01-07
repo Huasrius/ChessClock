@@ -1,6 +1,5 @@
 
 //Initial Values of the App
-document.documentElement.requestFullscreen();
 const chessClockSetup = new chessClockSetupClass(600, false, 0, false, 0, 600, false, 0, false, 0);
 const chessClock = new chessClockClass(chessClockSetup);
 
