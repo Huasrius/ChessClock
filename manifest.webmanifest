@@ -5,7 +5,7 @@
   "theme_color": "#262626",
   "display": "fullscreen",
   "orientation": "portrait",
-  "start_url": "/ChessClock/?fullscreen=true",
+  "start_url": "/ChessClock/",
   "scope": "/ChessClock/",
   "id": "1",
   "description": "A Clock to play Chess",
