@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- possible content values: default, black or black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#262626" />
+    <meta name="theme-color" content="#262626"/>
     <title>ChessClock</title>
     <link rel="canonical" href="https://huasrius.github.io/ChessClock/" />
     <link rel="manifest" href="/ChessClock/manifest.webmanifest">
@@ -19,80 +15,54 @@
 
 <body>
     <!-- HTMl -->
-    <div class="sticky top-0">
-        <div class="h-safe-area-inset-top" :class="{
-                'bg-black': !transparent
-                            || (transparent && scrollTop > 0)
-            }"></div>
-        <div class="wrapper">
-            <div id="player2Field" class="playerField">
-                <div id="player2Button" onclick="chessClock.player2Button()" class="player player2">
-                    <div id="player2Count" class="count">
-                        <string></string>
-                    </div>
-                    <div id="player2" class="time">
-                        <string></string>
-                    </div>
-                    <div id="player2Delay" class="delay">
-                        <string></string>
-                    </div>
+
+    <div class="wrapper">
+        <div id="player2Field" class="playerField">
+            <div id="player2Button" onclick="chessClock.player2Button()" class="player player2">
+                <div id="player2Count" class="count">
+                    <string></string>
+                </div>
+                <div id="player2" class="time">
+                    <string></string>
+                </div>
+                <div id="player2Delay" class="delay">
+                    <string></string>
                 </div>
             </div>
-            <div class="settings">
-                <div onclick="chessClock.pauseStartButton()" id="pause" class="settingObj">
-                    <img id="pauseStartImage" src="img\start.png" alt="">
-                </div>
-                <div onclick="chessClock.resetButton()" id="reset" class="settingObj">
-                    <img src="img\restart.svg" alt="">
-                </div>
-                <div onclick="chessClock.settingButton()" id="setting" class="settingObj">
-                    <img src="img\settings.svg" alt="">
-                </div>
+        </div>
+        <div class="settings">
+            <div onclick="chessClock.pauseStartButton()" id="pause" class="settingObj">
+                <img id="pauseStartImage" src="img\start.png" alt="">
             </div>
-            <div id="player1Field" class="playerField">
-                <div id="player1Button" onclick="chessClock.player1Button()" class="player">
-                    <div id="player1Count" class="count">
-                        <string></string>
-                    </div>
-                    <div id="player1" class="time">
-                        <string></string>
-                    </div>
-                    <div id="player1Delay" class="delay">
-                        <string></string>
-                    </div>
+            <div onclick="chessClock.resetButton()" id="reset" class="settingObj">
+                <img src="img\restart.svg" alt="">
+            </div>
+            <div onclick="chessClock.settingButton()" id="setting" class="settingObj">
+                <img src="img\settings.svg" alt="">
+            </div>
+        </div>
+        <div id="player1Field" class="playerField">
+            <div id="player1Button" onclick="chessClock.player1Button()" class="player">
+                <div id="player1Count" class="count">
+                    <string></string>
+                </div>
+                <div id="player1" class="time">
+                    <string></string>
+                </div>
+                <div id="player1Delay" class="delay">
+                    <string></string>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        if (navigator.serviceWorker) {
-            navigator.serviceWorker.register(
-                '/ChessClock/sw.js',
-                { scope: '/ChessClock/' }
-            )
-        }
-        export default {
-            data() {
-                return {
-                    scrollTop: 0
-                }
-            },
-            props: {
-                transparent: {
-                    type: Boolean,
-                    default: false
-                }
-            },
-            methods: {
-                scrollListener(e) {
-                    this.scrollTop = e.target.scrollTop;
-                }
-            },
-            mounted() {
-                window.addEventListener('scroll', this.scrollListener);
-            }
-        }
-    </script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/ChessClock/sw.js',
+          {scope: '/ChessClock/'}
+        )
+      }
+      </script>
 </body>
 <script src="src/player.js"></script>
 <script src="src/chessClock.js"></script>
