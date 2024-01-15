@@ -1,6 +1,6 @@
 # ChessClock
 
-the app can be downloader over the following link:
+The app can be downloaded over the following link:
 
 https://huasrius.github.io/ChessClock/
 
